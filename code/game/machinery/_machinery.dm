@@ -165,6 +165,7 @@
 	. = ..()
 	GLOB.machines += src
 	SSmachines.register_machine(src)
+	IPnumber = SSmachines.all_machines.len
 
 	if(ispath(circuit, /obj/item/circuitboard))
 		circuit = new circuit(src)

@@ -13,8 +13,10 @@
 	alert_able = FALSE
 	var/list/messages = list("Welcome to the NTerminal!, have a safe and productive romp through our shitty networking system!")
 	var/session
+	var/dataterm
 
 /datum/computer_file/program/terminal/New()
+	. = ..()
 	session = new /datum/termsesh
 
 /datum/termsesh
@@ -27,7 +29,15 @@
 			var/message = params["message"]
 			messages.Add(message)
 			if(message == "ping")
-				messages.Add("pong")
+				if(istype(computer, /obj/item/modular_computer/processor))
+					var/obj/item/modular_computer/processor/P = computer
+					var/obj/machinery/modular_computer/M = P.machinery_computer
+					if(M.dataterminal && M.dataterminal.powernet)
+						var/obj/machinery/D
+						for(D in M.dataterminal.powernet.networknodes)
+							messages.Add(D.IPnumber)
+
+
 
 
 
@@ -44,13 +54,14 @@
 
 /datum/netpacket
 	var/packet
-	var/static/regex/pack_data = regex(@"?<=D{)([^}]*)(?=})")
-	var/static/regex/pack_client = regex(@"(?<=%C)([^%]*)(?=%)")
-	var/static/regex/pack_server = regex(@"(?<=%S)([^%]*)(?=%)")
-	var/static/regex/pack_param = regex(@"?<=P{)([^}]*)(?=})")
+	var/static/regex/pack_data = regex(@"(?<=D\{)([^}]*)(?=})", "g")
+	var/static/regex/pack_client = regex(@"(?<=C<)([^>]*)(?=>)", "g")
+	var/static/regex/pack_server = regex(@"(?<=S<)([^>]*)(?=>)", "g")
+	var/static/regex/pack_param = regex(@"(?<=P\{)([^}]*)(?=})", "g")
 
 /datum/netpacket/proc/send()
+
 	var/list/data = pack_data.Find(packet)
-	var/list/data = pack_client.Find(packet)
-	var/list/data = pack_server.Find(packet)
-	var/list/data = pack_param.Find(packet)
+	var/list/client = pack_client.Find(packet)
+	var/list/server = pack_server.Find(packet)
+	var/list/param = pack_param.Find(packet)
