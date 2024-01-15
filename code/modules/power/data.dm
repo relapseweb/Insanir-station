@@ -100,7 +100,7 @@
 /obj/machinery/power/dataterminal/proc/register_machine(var/obj/machinery/machine)
 	machine.dataterminal = src
 	master = machine
-	refresh_powernet
+	refresh_powernet()
 
 /obj/machinery/power/dataterminal/proc/unregister_machine(var/obj/machinery/machine)
 	machine.dataterminal = null
@@ -148,6 +148,7 @@
 			dataterminal.refresh_powernet()
 	netpacket_rx.master = src
 	netpacket_tx.master = src
+
 /obj/machinery/proc/test_terminal()
 	var/turf/T = get_turf(loc)
 	for(var/obj/A in T)

@@ -34,10 +34,10 @@ SUBSYSTEM_DEF(wirednetwork)
 	var/areaalreadyregistered = FALSE
 	if(areas.Find(area))
 		areaalreadyregistered = TRUE
-	if(areaalreadyregistered = FALSE) //this is kinda redundant but just in case
+	if(areaalreadyregistered == FALSE) //this is kinda redundant but just in case
 		areas.Add(area)
 		area.ipnumber = areacounter
 		areacounter += 1
 	for(var/obj/machinery/power/dataterminal/D in area.dataterminals)
-			counter += 1
+		counter += 1
 	term.ipnumber = counter
