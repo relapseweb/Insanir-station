@@ -49,8 +49,8 @@
 	icon_state = "capcloak"
 
 /obj/item/clothing/neck/cloak/hop
-	name = "head of personnel's cloak"
-	desc = "Worn by the Head of Personnel. It smells faintly of bureaucracy."
+	name = "logistics officer's cloak"
+	desc = "Worn by the Logistics Officer. It smells faintly of bureaucracy."
 	icon_state = "hopcloak"
 
 /obj/item/clothing/neck/cloak/skill_reward

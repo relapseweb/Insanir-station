@@ -79,9 +79,9 @@
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#0070B7#FFCE5B"
 
-//Head of Personnel
+//Logistics Officer
 /obj/item/clothing/head/hats/hopcap
-	name = "head of personnel's cap"
+	name = "logistics officer's cap"
 	icon_state = "hopcap"
 	desc = "The symbol of true bureaucratic micromanagement."
 	armor_type = /datum/armor/hats_hopcap

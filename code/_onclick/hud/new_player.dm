@@ -9,6 +9,7 @@
 	if (owner.client.interviewee)
 		return
 
+
 	var/list/buttons = subtypesof(/atom/movable/screen/lobby)
 	for(var/button_type in buttons)
 		var/atom/movable/screen/lobby/lobbyscreen = new button_type()
@@ -18,6 +19,24 @@
 		if(istype(lobbyscreen, /atom/movable/screen/lobby/button))
 			var/atom/movable/screen/lobby/button/lobby_button = lobbyscreen
 			lobby_button.owner = REF(owner)
+	var/atom/movable/screen/lobbyhud/leftpanel = new
+	var/atom/movable/screen/lobbyhud/right/rightpanel = new
+	leftpanel.hud = src
+	rightpanel.hud = src
+	static_inventory += leftpanel
+	static_inventory += rightpanel
+
+/atom/movable/screen/lobbyhud
+	name = "left panel"
+	icon = 'insanir/icons/hud/leftpanel.dmi'
+	icon_state = "mainmenu"
+	screen_loc = "hudleft:1,1 to 3,16"
+
+/atom/movable/screen/lobbyhud/right
+	name = "right panel"
+	icon = 'insanir/icons/hud/rightpanel.dmi'
+	icon_state = "mainmenu"
+	screen_loc = "hudright:1,1 to 1,16"
 
 /atom/movable/screen/lobby
 	plane = SPLASHSCREEN_PLANE

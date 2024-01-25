@@ -31,7 +31,7 @@
 	name = "Service Techfab Replacement"
 	desc = "You're telling me botany broke it with a lemon?"
 	cost = CARGO_CRATE_VALUE * 50
-	access = ACCESS_HOP
+	access = ACCESS_LO
 	contains = list(/obj/item/circuitboard/machine/protolathe/department/service,
 					/obj/item/stock_parts/matter_bin/adv = 2,
 					/obj/item/stock_parts/manipulator/nano = 2,

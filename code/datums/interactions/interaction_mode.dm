@@ -1,5 +1,4 @@
 GLOBAL_REAL_VAR(list/available_interaction_modes) = list(
-	IMODE_COMBAT_MODE = /datum/interaction_mode/combat_mode,
 	IMODE_INTENTS = /datum/interaction_mode/intents3
 )
 

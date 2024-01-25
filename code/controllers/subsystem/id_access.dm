@@ -158,7 +158,7 @@ SUBSYSTEM_DEF(id_access)
 			"templates" = list(),
 			"pdas" = list(),
 		),
-		"[ACCESS_HOP]" = list(
+		"[ACCESS_LO]" = list(
 			"regions" = list(REGION_GENERAL),
 			"head" = JOB_HEAD_OF_PERSONNEL,
 			"templates" = list(),
@@ -293,7 +293,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_VAULT]"] = "Main Vault"
 	desc_by_access["[ACCESS_MINING_STATION]"] = "Mining Outpost"
 	desc_by_access["[ACCESS_XENOBIOLOGY]"] = "Xenobiology Lab"
-	desc_by_access["[ACCESS_HOP]"] = "HoP Office"
+	desc_by_access["[ACCESS_LO]"] = "HoP Office"
 	desc_by_access["[ACCESS_HOS]"] = "HoS Office"
 	desc_by_access["[ACCESS_CE]"] = "CE Office"
 	desc_by_access["[ACCESS_PHARMACY]"] = "Pharmacy"

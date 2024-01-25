@@ -59,7 +59,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/command/hop/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_HOP
+	access_list += ACCESS_LO
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/command/captain/get_access()
@@ -545,7 +545,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/command/hop/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_HOP
+	access_list += ACCESS_LO
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/command/captain/get_access()

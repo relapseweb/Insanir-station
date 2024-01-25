@@ -400,7 +400,7 @@
 	icon_state = "cmo_office"
 
 /area/station/command/heads_quarters/hop
-	name = "\improper Head of Personnel's Office"
+	name = "\improper Logistics Officer's Office"
 	icon_state = "hop_office"
 
 /area/station/command/heads_quarters/hos

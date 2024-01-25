@@ -568,7 +568,7 @@
 	airlock_type = /obj/machinery/door/airlock/captain
 
 /obj/structure/door_assembly/door_assembly_hop
-	name = "head of personnel airlock assembly"
+	name = "logistics officer airlock assembly"
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hop.dmi'
 	glass_type = /obj/machinery/door/airlock/command/glass
 	airlock_type = /obj/machinery/door/airlock/hop

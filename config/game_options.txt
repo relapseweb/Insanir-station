@@ -265,7 +265,7 @@ RANDOM_LAWS corporate
 #RANDOM_LAWS peacekeeper
 #RANDOM_LAWS reporter
 #RANDOM_LAWS hulkamania
-#RANDOM_LAWS ten_commandments
+RANDOM_LAWS ten_commandments
 
 ## Bad idea laws. Probably shouldn't enable these
 #RANDOM_LAWS syndie
@@ -342,20 +342,20 @@ SILICON_MAX_LAW_AMOUNT 12
 ROUNDSTART_RACES human
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
-ROUNDSTART_RACES lizard
+#ROUNDSTART_RACES lizard
 #ROUNDSTART_RACES fly
-ROUNDSTART_RACES moth
-ROUNDSTART_RACES plasmaman
+#ROUNDSTART_RACES moth
+#ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
-ROUNDSTART_RACES oozeling
-ROUNDSTART_RACES ipc
-ROUNDSTART_RACES simian
-ROUNDSTART_RACES arachnid
+#ROUNDSTART_RACES oozeling
+#ROUNDSTART_RACES ipc
+#ROUNDSTART_RACES simian
+#ROUNDSTART_RACES arachnid
 
 ## Races that are better than humans in some ways, but worse in others
-ROUNDSTART_RACES ethereal
-ROUNDSTART_RACES goblin
-ROUNDSTART_RACES floran
+#ROUNDSTART_RACES ethereal
+#ROUNDSTART_RACES goblin
+#ROUNDSTART_RACES floran
 #ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES abductor
 #ROUNDSTART_RACES synth
@@ -430,7 +430,7 @@ OVERFLOW_CAP -1
 SPOOKTOBER_ENABLED
 
 ## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
-#GREY_ASSISTANTS
+GREY_ASSISTANTS
 
 ##Limit Spell Choices##
 ## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase

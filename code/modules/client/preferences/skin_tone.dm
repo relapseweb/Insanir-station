@@ -27,6 +27,7 @@
 
 /datum/preference/choiced/skin_tone/apply_to_human(mob/living/carbon/human/target, value)
 	if(target.dna.species.use_skintones)
+		target.original_skin_tone = value
 		target.skin_tone = value
 
 /datum/preference/choiced/skin_tone/is_accessible(datum/preferences/preferences)

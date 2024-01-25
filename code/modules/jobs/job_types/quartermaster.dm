@@ -7,7 +7,7 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "the logistics officer"
 	minimal_player_age = 7
 	supervisors = SUPERVISOR_CAPTAIN
 	exp_requirements = 120
@@ -15,7 +15,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "QUARTERMASTER"
 
-	outfit = /datum/outfit/job/quartermaster
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/cargo
 
 	paycheck = PAYCHECK_COMMAND

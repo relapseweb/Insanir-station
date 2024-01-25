@@ -162,46 +162,59 @@
 
 /proc/skintone2hex(skin_tone)
 	. = 0
-	switch(skin_tone)
-		if("caucasian1")
-			. = "#ffe0d1"
-		if("caucasian2")
-			. = "#fcccb3"
-		if("caucasian3")
-			. = "#e8b59b"
-		if("latino")
-			. = "#d9ae96"
-		if("mediterranean")
-			. = "#c79b8b"
-		if("asian1")
-			. = "#ffdeb3"
-		if("asian2")
-			. = "#e3ba84"
-		if("arab")
-			. = "#c4915e"
-		if("indian")
-			. = "#b87840"
-		if("african1")
-			. = "#754523"
-		if("african2")
-			. = "#471c18"
-		if("albino")
-			. = "#fff4e6"
-		if("orange")
-			. = "#ffc905"
+	var/static/regex/hextaggart = regex("(#)")
+	if(hextaggart.Find(skin_tone))
+		. = skin_tone
+	else
+		switch(skin_tone)
+			if("caucasian1")
+				. = "#ffe0d1"
+			if("caucasian2")
+				. = "#fcccb3"
+			if("caucasian3")
+				. = "#e8b59b"
+			if("latino")
+				. = "#d9ae96"
+			if("mediterranean")
+				. = "#c79b8b"
+			if("asian1")
+				. = "#ffdeb3"
+			if("asian2")
+				. = "#e3ba84"
+			if("arab")
+				. = "#c4915e"
+			if("indian")
+				. = "#b87840"
+			if("african1")
+				. = "#754523"
+			if("african2")
+				. = "#471c18"
+			if("albino")
+				. = "#fff4e6"
+			if("orange")
+				. = "#ffc905"
 
-		///simian tones
-		if("ffffff")
-			. = "#ffffff"
-		if("ffb089")
-			. = "#ffb089"
-		if("aeafb3")
-			. = "#aeafb3"
-		if("bfd0ca")
-			. = "#bfd0ca"
-		if("ce7d54")
-			. = "#ce7d54"
-		if("c47373")
-			. = "#c47373"
-		if("f4e2d5")
-			. = "#f4e2d5"
+			///simian tones
+			if("ffffff")
+				. = "#ffffff"
+			if("ffb089")
+				. = "#ffb089"
+			if("aeafb3")
+				. = "#aeafb3"
+			if("bfd0ca")
+				. = "#bfd0ca"
+			if("ce7d54")
+				. = "#ce7d54"
+			if("c47373")
+				. = "#c47373"
+			if("f4e2d5")
+				. = "#f4e2d5"
+
+
+/proc/hexaddition(var/rgb1, var/rgb2)
+	var/list/num1 = rgb2num(rgb1)
+	var/list/num2 = rgb2num(rgb2)
+	var/red = num1[1] + num2[1]
+	var/green = num1[2] + num2[2]
+	var/blue = num1[3] + num2[3]
+	return rgb(red,green,blue)

@@ -14,7 +14,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "SECURITY_OFFICER"
 
-	outfit = /datum/outfit/job/security
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/security
 
 	paycheck = PAYCHECK_CREW

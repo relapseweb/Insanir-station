@@ -223,7 +223,7 @@ GLOBAL_LIST_INIT(skin_tones, sort_list(list(
 	"arab",
 	"indian",
 	"african1",
-	"african2"
+	"african2",
 	)))
 
 GLOBAL_LIST_INIT(skin_tone_names, list(

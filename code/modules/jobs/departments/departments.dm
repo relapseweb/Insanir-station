@@ -114,7 +114,7 @@
 /datum/job_department/service
 	department_name = DEPARTMENT_SERVICE
 	department_bitflags = DEPARTMENT_BITFLAG_SERVICE
-	department_head = /datum/job/head_of_personnel
+	department_head = /datum/job/logistics_officer
 	department_experience_type = EXP_TYPE_SERVICE
 	display_order = 7
 	label_class = "service"

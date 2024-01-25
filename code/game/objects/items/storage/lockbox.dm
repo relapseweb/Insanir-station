@@ -165,9 +165,9 @@
 		. += medalicon
 
 /obj/item/storage/lockbox/medal/hop
-	name = "Head of Personnel medal box"
+	name = "Logistics Officer medal box"
 	desc = "A locked box used to store medals to be given to those exhibiting excellence in management."
-	req_access = list(ACCESS_HOP)
+	req_access = list(ACCESS_LO)
 
 /obj/item/storage/lockbox/medal/hop/PopulateContents()
 	for(var/i in 1 to 3)
@@ -203,7 +203,7 @@
 /obj/item/storage/lockbox/medal/service
 	name = "service award box"
 	desc = "A locked box used to store awards to be given to members of the service department."
-	req_access = list(ACCESS_HOP)
+	req_access = list(ACCESS_LO)
 
 /obj/item/storage/lockbox/medal/service/PopulateContents()
 		new /obj/item/clothing/accessory/medal/silver/excellence(src)

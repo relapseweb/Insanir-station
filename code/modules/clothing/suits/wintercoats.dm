@@ -156,7 +156,7 @@
 	icon_state = "hood_captain"
 	armor_type = /datum/armor/winterhood_captain
 
-// Head of Personnel
+// Logistics Officer
 /datum/armor/winterhood_captain
 	melee = 25
 	bullet = 30
@@ -166,7 +166,7 @@
 	acid = 50
 
 /obj/item/clothing/suit/hooded/wintercoat/hop
-	name = "head of personnel's winter coat"
+	name = "logistics officer's winter coat"
 	desc = "A cozy winter coat, covered in thick fur. The breast features a proud yellow chevron, reminding everyone that you're the second banana."
 	icon_state = "coathop"
 	inhand_icon_state = null

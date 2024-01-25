@@ -2050,7 +2050,10 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage)
 "aJN" = (
-/obj/structure/table/wood,
+/obj/machinery/cryopod{
+	dir = 1;
+	pixel_y = -10
+	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "aJQ" = (
@@ -12319,6 +12322,9 @@
 	dir = 1
 	},
 /area/station/maintenance/department/cargo)
+"dQf" = (
+/turf/open/floor/carpet,
+/area/station/command/heads_quarters/captain)
 "dQI" = (
 /obj/effect/landmark/start/assistant,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
@@ -14086,13 +14092,10 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai)
 "euf" = (
-/obj/structure/bed{
-	dir = 4
-	},
-/obj/item/bedsheet/captain{
-	dir = 4
-	},
 /obj/machinery/airalarm/directional/west,
+/obj/machinery/cryopod{
+	dir = 4
+	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "eum" = (
@@ -14464,6 +14467,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"eAk" = (
+/obj/structure/cable,
+/obj/item/gravity_gun,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/captain)
 "eAs" = (
 /obj/structure/cable,
 /obj/machinery/light/directional/south,
@@ -15186,6 +15194,9 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
+"eMm" = (
+/turf/open/floor/carpet/neon/simple/red/nodots,
+/area/station/command/heads_quarters/captain)
 "eMr" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/bridge_pipe/cyan/visible,
@@ -19429,7 +19440,6 @@
 /obj/structure/chair/comfy/brown{
 	dir = 4
 	},
-/obj/effect/landmark/start/captain,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "ghN" = (
@@ -22680,6 +22690,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
+"hnK" = (
+/obj/cryocore,
+/turf/open/floor/carpet,
+/area/station/command/heads_quarters/captain)
 "hnN" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Xenobiology Pens Observation - Port Aft";
@@ -27271,6 +27285,9 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
+"iOr" = (
+/turf/open/floor/carpet/neon/simple/black,
+/area/station/command/heads_quarters/captain)
 "iOs" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/airalarm/directional/south,
@@ -28100,10 +28117,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"jaq" = (
-/obj/effect/landmark/start/head_of_personnel,
-/turf/open/floor/iron,
-/area/station/command/heads_quarters/hop)
 "jaw" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -55354,6 +55367,7 @@
 "rLe" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/dresser,
+/obj/machinery/computer/cryopod/directional/north,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "rLo" = (
@@ -56052,10 +56066,10 @@
 /turf/open/floor/iron,
 /area/mine/laborcamp)
 "rXi" = (
-/obj/structure/chair/comfy/brown{
-	dir = 8
-	},
 /obj/structure/cable,
+/obj/machinery/cryopod{
+	dir = 4
+	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "rXr" = (
@@ -67260,6 +67274,9 @@
 /obj/effect/mapping_helpers/mail_sorting/medbay/virology,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/aft)
+"vFX" = (
+/turf/open/floor/carpet/neon/simple/red,
+/area/station/command/heads_quarters/captain)
 "vGh" = (
 /obj/machinery/firealarm/directional/south,
 /obj/structure/disposalpipe/segment{
@@ -69975,6 +69992,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
+/obj/machinery/cryopod,
+/obj/effect/landmark/start/captain,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "wzn" = (
@@ -71826,8 +71845,8 @@
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "xbo" = (
-/obj/structure/chair/comfy/brown{
-	dir = 4
+/obj/machinery/cryopod{
+	dir = 8
 	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
@@ -232987,7 +233006,7 @@ jWP
 ool
 jRC
 cgC
-jaq
+shc
 jkQ
 cpm
 gQZ
@@ -237856,7 +237875,7 @@ tUO
 qWZ
 lpM
 xxx
-xbo
+dQf
 xbo
 anu
 fue
@@ -238114,7 +238133,7 @@ uLp
 lpM
 byx
 aJN
-aJN
+hnK
 wzm
 ond
 mvc
@@ -238370,10 +238389,10 @@ sNQ
 oVR
 lpM
 dbs
-rXi
+wma
 rXi
 wma
-heX
+eAk
 qjx
 heX
 viQ
@@ -238627,9 +238646,9 @@ ugI
 lIs
 lpM
 vPF
-uEm
-uEm
-uEm
+eMm
+vFX
+iOr
 uEm
 uEm
 uEm

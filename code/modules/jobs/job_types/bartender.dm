@@ -5,11 +5,11 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = SUPERVISOR_HOP
+	supervisors = SUPERVISOR_LO
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "BARTENDER"
 
-	outfit = /datum/outfit/job/bartender
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/bar
 
 	paycheck = PAYCHECK_CREW

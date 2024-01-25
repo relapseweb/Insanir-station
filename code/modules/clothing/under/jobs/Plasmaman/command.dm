@@ -13,9 +13,9 @@
 	acid = 95
 	wound = 15
 
-/obj/item/clothing/under/plasmaman/head_of_personnel
-	name = "head of personnel's plasma envirosuit"
-	desc = "It's an envirosuit worn by someone who works in the position of \"Head of Personnel\"."
+/obj/item/clothing/under/plasmaman/logistics_officer
+	name = "logistics officer's plasma envirosuit"
+	desc = "It's an envirosuit worn by someone who works in the position of \"Logistics Officer\"."
 	icon_state = "hop_envirosuit"
 	inhand_icon_state = null
 

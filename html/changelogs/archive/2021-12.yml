@@ -44,7 +44,7 @@
   - balance: Downgrades the purchasable knives in cargo from Combat Knives to Survival
       Knives, moves them from Security to Service.
   JohnFulpWillard:
-  - balance: the Head of Personnel no longer has access to Security Office nor Mechs
+  - balance: the Logistics Officer no longer has access to Security Office nor Mechs
       (outside of mining ones).
   Melbert:
   - bugfix: Mjol the Creative's summons can't be dispelled by observers anymore

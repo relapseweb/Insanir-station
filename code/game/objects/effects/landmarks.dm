@@ -134,9 +134,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Chief Engineer"
 	icon_state = "Chief Engineer"
 
-/obj/effect/landmark/start/head_of_personnel
-	name = "Head of Personnel"
-	icon_state = "Head of Personnel"
+/obj/effect/landmark/start/logistics_officer
+	name = "Logistics Officer"
+	icon_state = "Logistics Officer"
 
 /obj/effect/landmark/start/librarian
 	name = "Curator"
@@ -579,7 +579,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	location = "Bridge"
 
 /obj/effect/landmark/navigate_destination/hop
-	location = "Head of Personnel's Office"
+	location = "Logistics Officer's Office"
 
 /obj/effect/landmark/navigate_destination/vault
 	location = "Vault"

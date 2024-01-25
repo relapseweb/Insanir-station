@@ -80,8 +80,8 @@
 	icon_state = "clownplasma"
 	greyscale_colors = "#ff0000"
 
-/obj/item/clothing/gloves/color/plasmaman/head_of_personnel
-	name = "head of personnel's envirogloves"
+/obj/item/clothing/gloves/color/plasmaman/logistics_officer
+	name = "logistics officer's envirogloves"
 	desc = "Covers up those scandalous, bony hands. Appears to be an attempt at making a replica of the captain's gloves."
 	icon_state = "hopplasma"
 	inhand_icon_state = null

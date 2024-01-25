@@ -574,8 +574,8 @@
 	AddComponent(/datum/component/toggle_icon)
 
 /obj/item/clothing/suit/armor/vest/hop
-	name = "head of personnel's coat"
-	desc = "A stylish coat given to a Head of Personnel."
+	name = "logistics officer's coat"
+	desc = "A stylish coat given to a Logistics Officer."
 	icon_state = "hop_coat"
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS

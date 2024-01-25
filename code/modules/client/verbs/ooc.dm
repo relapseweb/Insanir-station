@@ -362,19 +362,26 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	// Calculate desired pixel width using window size and aspect ratio
 	var/list/sizes = params2list(winget(src, "mainwindow.split;mapwindow", "size"))
-
+	var/list/lefthudsizes = params2list(winget(src, "mapwindow.hudleft", "size"))
+	var/list/righthudsizes = params2list(winget(src, "mapwindow.hudright", "size"))
 	// Client closed the window? Some other error? This is unexpected behaviour, let's
 	// CRASH with some info.
 	if(!sizes["mapwindow.size"])
 		CRASH("sizes does not contain mapwindow.size key. This means a winget failed to return what we wanted. --- sizes var: [sizes] --- sizes length: [length(sizes)]")
+	if(!lefthudsizes[1])
+		CRASH("sizes does not contain lefthud.size key. This means a winget failed to return what we wanted. --- sizes var: [lefthudsizes] --- sizes length: [length(lefthudsizes)], [winexists(src,"mapwindow.hudleft")] exists [lefthudsizes[1]]")
+	if(!righthudsizes[1])
+		CRASH("sizes does not contain righthud.size key. This means a winget failed to return what we wanted. --- sizes var: [righthudsizes] --- sizes length: [length(lefthudsizes)], [winexists(src,"mapwindow.hudright")] exists [righthudsizes[1]]")
 
 	var/list/map_size = splittext(sizes["mapwindow.size"], "x")
+	var/list/lefthud_size = splittext(lefthudsizes[1], "x")
+	var/list/righthud_size = splittext(righthudsizes[1], "x")
 
 	// Gets the type of zoom we're currently using from our view datum
 	// If it's 0 we do our pixel calculations based off the size of the mapwindow
 	// If it's not, we already know how big we want our window to be, since zoom is the exact pixel ratio of the map
 	var/zoom_value = src.view_size?.zoom || 0
-
+	var/extra_width = text2num(lefthud_size[1] + righthud_size[1])
 	var/desired_width = 0
 	if(zoom_value)
 		desired_width = round(view_size[1] * zoom_value * world.icon_size)
@@ -385,7 +392,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		if(length(map_size) != 2)
 			CRASH("map_size of incorrect length --- map_size var: [map_size] --- map_size length: [length(map_size)]")
 		var/height = text2num(map_size[2])
-		desired_width = round(height * aspect_ratio)
+		desired_width = round(height * aspect_ratio) + 212
 
 	if (text2num(map_size[1]) == desired_width)
 		// Nothing to do

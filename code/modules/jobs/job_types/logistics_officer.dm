@@ -1,4 +1,4 @@
-/datum/job/head_of_personnel
+/datum/job/logistics_officer
 	title = JOB_HEAD_OF_PERSONNEL
 	description = "Alter access on ID cards, manage the service department, \
 		protect Ian, run the station when the captain dies."
@@ -8,7 +8,7 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = SUPERVISOR_HOP
+	supervisors = SUPERVISOR_LO
 	req_admin_notify = 1
 	minimal_player_age = 10
 	exp_requirements = 1500
@@ -17,8 +17,8 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "HEAD_OF_PERSONNEL"
 
-	outfit = /datum/outfit/job/hop
-	plasmaman_outfit = /datum/outfit/plasmaman/head_of_personnel
+	outfit = /datum/outfit/job
+	plasmaman_outfit = /datum/outfit/plasmaman/logistics_officer
 	departments_list = list(
 		/datum/job_department/service,
 		/datum/job_department/cargo,
@@ -44,17 +44,17 @@
 	voice_of_god_power = 1.4 //Command staff has authority
 
 
-/datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)
+/datum/job/logistics_officer/get_captaincy_announcement(mob/living/captain)
 	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
 
 
 /datum/outfit/job/hop
-	name = "Head of Personnel"
-	jobtype = /datum/job/head_of_personnel
+	name = "Logistics Officer"
+	jobtype = /datum/job/logistics_officer
 
 	id = /obj/item/card/id/advanced/silver
-	id_trim = /datum/id_trim/job/head_of_personnel
-	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel
+	id_trim = /datum/id_trim/job/logistics_officer
+	uniform = /obj/item/clothing/under/rank/civilian/logistics_officer
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,
 		/obj/item/storage/box/ids = 1,
@@ -77,7 +77,7 @@
 		undershirt = /datum/sprite_accessory/undershirt/ian
 
 //only pet worth reviving
-/datum/job/head_of_personnel/get_mail_goodies(mob/recipient)
+/datum/job/logistics_officer/get_mail_goodies(mob/recipient)
 	. = ..()
 	// Strange Reagent if the pet is dead.
 	for(var/mob/living/basic/pet/dog/corgi/ian/staff_pet in GLOB.dead_mob_list)
@@ -86,13 +86,13 @@
 
 /obj/item/paper/fluff/ids_for_dummies
 	name = "Memo: New IDs and You"
-	desc = "It looks like this was left by the last Head of Personnel to man this station. It explains some information about new IDs."
+	desc = "It looks like this was left by the last Logistics Officer to man this station. It explains some information about new IDs."
 	default_raw_text = {"
 <h1>Dummy's Guide To New IDs</h1>
 <h2>The Basics</h2>
-<p>Card Trim - This is the job assigned to the card. The card's trim decides what Basic accesses the card can hold. Basic accesses cost nothing! Grey ID cards cannot hold Head of Staff or Captain trims. Silver ID cards can hold Head of Staff trims but not Captain trims and are in a box in the Head of Personnel's office and orderable from cargo. Gold ID cards can hold all access. The only guaranteed Gold ID card is the Captain's Spare, held in a golden safe on the bridge with access codes given to the station's highest ranking officer. All other gold ID cards are carried exclusively by Captains.</p>
+<p>Card Trim - This is the job assigned to the card. The card's trim decides what Basic accesses the card can hold. Basic accesses cost nothing! Grey ID cards cannot hold Head of Staff or Captain trims. Silver ID cards can hold Head of Staff trims but not Captain trims and are in a box in the Logistics Officer's office and orderable from cargo. Gold ID cards can hold all access. The only guaranteed Gold ID card is the Captain's Spare, held in a golden safe on the bridge with access codes given to the station's highest ranking officer. All other gold ID cards are carried exclusively by Captains.</p>
 <p>Wildcards - These are any additional accesses a card has that are not part of the card's trim. Lower quality ID cards have fewer wildcards and the wildcards they do have are of lower rarity.</p>
-<p>Job Changes - To change a job, you need to go to the PDA & ID Painter that's in every Head of Personnel office. This can be used to apply a new trim to an ID card, but this will wipe all that card's accesses in the process. You then take this ID card to any modular computer with the Plexagon Access Management app and when logged in with the appropriate Head of Staff or ID Console access can then select from Templates to quick-fill accesses or apply them manually.</p>
+<p>Job Changes - To change a job, you need to go to the PDA & ID Painter that's in every Logistics Officer office. This can be used to apply a new trim to an ID card, but this will wipe all that card's accesses in the process. You then take this ID card to any modular computer with the Plexagon Access Management app and when logged in with the appropriate Head of Staff or ID Console access can then select from Templates to quick-fill accesses or apply them manually.</p>
 <p>Firing Staff - Terminating a staff member's employment will wipe any trim from their card, remove all access and instantly set them as demoted.</p>
 <h2>Changing Jobs - Step by Step</h2>
 <ol>

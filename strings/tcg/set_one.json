@@ -596,7 +596,7 @@
 		},
 		{
 			"id": "HOP",
-			"name": "Head of Personnel",
+			"name": "Logistics Officer",
 			"desc": "The head of the Cargo and Service Departments, guardian of all access, and Ian's lovable, yet dumb, sidekick.",
 			"rules": "Once per turn: Select a friendly creature card. That card gains {$Changeling}.",
 			"icon_state": "hop",
@@ -607,7 +607,7 @@
 			"cardtype": "Creature",
 			"cardsubtype": "Human Commander",
 			"rarity": "uncommon",
-			"summon_icon_state": "Head of Personnel"
+			"summon_icon_state": "Logistics Officer"
 		},
 		{
 			"id": "HOS",

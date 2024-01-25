@@ -87,7 +87,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/assistant
 
@@ -151,7 +151,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/bartender
 
@@ -167,6 +167,7 @@
 		ACCESS_MAINT_TUNNELS,
 		ACCESS_MECH_MINING,
 		ACCESS_MINERAL_STOREROOM,
+		ACCESS_SCIENCE,
 	)
 	extra_access = list(
 		ACCESS_MINING,
@@ -198,7 +199,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/botanist
 
@@ -247,7 +248,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/cargo_technician
 
@@ -268,7 +269,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/chaplain
 
@@ -390,7 +391,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/clown
 
@@ -413,7 +414,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/cook
 
@@ -437,7 +438,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/curator
 
@@ -504,9 +505,9 @@
 		)
 	job = /datum/job/geneticist
 
-/datum/id_trim/job/head_of_personnel
-	assignment = "Head of Personnel"
-	intern_alt_name = "Head of Personnel-in-Training"
+/datum/id_trim/job/logistics_officer
+	assignment = "Logistics Officer"
+	intern_alt_name = "Captains assistant"
 	trim_state = "trim_headofpersonnel"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -545,7 +546,7 @@
 		ACCESS_WEAPONS,
 		)
 	minimal_wildcard_access = list(
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	extra_access = list()
 	extra_wildcard_access = list()
@@ -553,7 +554,7 @@
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
 	)
-	job = /datum/job/head_of_personnel
+	job = /datum/job/logistics_officer
 
 /datum/id_trim/job/head_of_security
 	assignment = "Head of Security"
@@ -628,7 +629,7 @@
 	extra_access = list()
 	template_access = list(
 		ACCESS_CAPTAIN,
-		ACCESS_HOP,
+		ACCESS_LO,
 		ACCESS_CHANGE_IDS,
 		)
 	job = /datum/job/janitor
@@ -649,7 +650,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/lawyer
 
@@ -692,7 +693,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/mime
 
@@ -736,7 +737,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		ACCESS_HOS,
 		)
 	job = /datum/job/prisoner
@@ -785,7 +786,7 @@
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
 		ACCESS_CMO,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/psychologist
 
@@ -814,7 +815,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 	)
 	job = /datum/job/quartermaster
 
@@ -1063,7 +1064,7 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
+		ACCESS_LO,
 		)
 	job = /datum/job/shaft_miner
 

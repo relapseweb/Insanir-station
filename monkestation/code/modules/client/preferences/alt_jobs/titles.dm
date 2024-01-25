@@ -183,9 +183,9 @@
 		"Mutation Researcher",
 	)
 
-/datum/job/head_of_personnel
+/datum/job/logistics_officer
 	alt_titles = list(
-		"Head of Personnel",
+		"Logistics Officer",
 		"Executive Officer",
 		"Employment Officer",
 		"Crew Supervisor",

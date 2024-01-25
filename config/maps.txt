@@ -53,3 +53,7 @@ endmap
 map oshan
 	votable
 endmap
+
+
+map orbitalstation
+endmap

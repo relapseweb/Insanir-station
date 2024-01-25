@@ -26,7 +26,7 @@ const BASEICONS = {
   'Cyborg': 'robot',
   'Detective': 'user-secret',
   'Geneticist': 'dna',
-  'Head of Personnel': 'dog',
+  'Logistics Officer': 'dog',
   'Head of Security': 'user-shield',
   'Janitor': 'soap',
   'Lawyer': 'gavel',
@@ -148,10 +148,10 @@ const ALTTITLES = {
   'Forensic Scientist': BASEICONS['Detective'],
   // Geneticist - dna
   'Mutation Researcher': BASEICONS['Geneticist'],
-  // Head of Personnel - dog
-  'Executive Officer': BASEICONS['Head of Personnel'],
-  'Employment Officer': BASEICONS['Head of Personnel'],
-  'Crew Supervisor': BASEICONS['Head of Personnel'],
+  // Logistics Officer - dog
+  'Executive Officer': BASEICONS['Logistics Officer'],
+  'Employment Officer': BASEICONS['Logistics Officer'],
+  'Crew Supervisor': BASEICONS['Logistics Officer'],
   // Head of Security - user-shield
   'Security Commander': BASEICONS['Head of Security'],
   'Chief Constable': BASEICONS['Head of Security'],

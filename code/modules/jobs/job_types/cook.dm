@@ -5,12 +5,12 @@
 	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 1
-	supervisors = SUPERVISOR_HOP
+	supervisors = SUPERVISOR_LO
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "COOK"
 	var/cooks = 0 //Counts cooks amount
 
-	outfit = /datum/outfit/job/cook
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/chef
 
 	paycheck = PAYCHECK_CREW

@@ -297,7 +297,7 @@
 		/datum/job/detective = /obj/item/organ/internal/lungs/cybernetic/tier3,
 		/datum/job/doctor = /obj/item/organ/internal/cyberimp/arm/surgery,
 		/datum/job/geneticist = /obj/item/organ/internal/fly, //we don't care about implants, we have cancer.
-		/datum/job/head_of_personnel = /obj/item/organ/internal/eyes/robotic,
+		/datum/job/logistics_officer = /obj/item/organ/internal/eyes/robotic,
 		/datum/job/head_of_security = /obj/item/organ/internal/eyes/robotic/thermals,
 		/datum/job/janitor = /obj/item/organ/internal/eyes/robotic/xray,
 		/datum/job/lawyer = /obj/item/organ/internal/heart/cybernetic/tier2,

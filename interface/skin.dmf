@@ -54,6 +54,7 @@ menu "menu"
 		category = "&Help"
 		saved-params = "is-checked"
 
+
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
@@ -61,18 +62,22 @@ window "mainwindow"
 		size = 640x440
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
 		icon = 'icons\\ui_icons\\common\\ss13_32.png'
 		macro = "default"
 		menu = "menu"
+		outer-size = 656x499
+		inner-size = 640x440
 	elem "split"
 		type = CHILD
 		pos = 3,0
 		size = 634x440
 		anchor1 = 0,0
 		anchor2 = 100,100
+		background-color = none
 		saved-params = "splitter"
 		left = "mapwindow"
 		right = "infowindow"
@@ -83,6 +88,7 @@ window "mainwindow"
 		size = 200x200
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = ""
 	elem "tooltip"
@@ -91,6 +97,7 @@ window "mainwindow"
 		size = 999x999
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = ""
 
@@ -101,15 +108,32 @@ window "mapwindow"
 		size = 640x480
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 		on-status = ".winset \"status_bar.text=[[*]]\" "
-	elem "map"
+	elem "hudright"
+		type = MAP
+		pos = 608,0
+		size = 32x480
+		anchor1 = 95,0
+		anchor2 = 100,100
+		saved-params = "zoom;letterbox;zoom-mode"
+	elem "hudleft"
 		type = MAP
 		pos = 0,0
-		size = 640x480
+		size = 96x480
 		anchor1 = 0,0
-		anchor2 = 100,100
+		anchor2 = 15,100
+		saved-params = "zoom;letterbox;zoom-mode"
+	elem "map"
+		type = MAP
+		pos = 96,0
+		size = 512x480
+		anchor1 = 15,0
+		anchor2 = 95,100
 		font-family = "Arial"
 		font-size = 7
 		is-default = true
@@ -119,14 +143,15 @@ window "mapwindow"
 	elem "status_bar"
 		type = LABEL
 		pos = 0,464
-		size = 280x16
+		size = 96x16
 		anchor1 = 0,100
-		is-visible = true
+		anchor2 = -1,-1
+		text-color = #ffffff
+		background-color = #222222
+		border = line
+		saved-params = ""
 		text = ""
 		align = left
-		background-color = #222222
-		text-color = #ffffff
-		border = line
 
 window "infowindow"
 	elem "infowindow"
@@ -209,11 +234,8 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
-		outer-size = 656x538
-		inner-size = 640x499
 	elem "input"
 		type = INPUT
 		pos = 2,460
@@ -229,7 +251,6 @@ window "outputwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = -1,-1
-		background-color = none
 		border = line
 		saved-params = "is-checked"
 		text = "OOC"
@@ -242,7 +263,6 @@ window "outputwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = -1,-1
-		background-color = none
 		border = line
 		saved-params = "is-checked"
 		text = "Say"
@@ -255,7 +275,6 @@ window "outputwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = -1,-1
-		background-color = none
 		border = line
 		saved-params = "is-checked"
 		text = "Me"
@@ -341,7 +360,6 @@ window "statwindow"
 		size = 1x1
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		is-visible = false
 		saved-params = ""
 

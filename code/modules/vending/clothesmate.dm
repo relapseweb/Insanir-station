@@ -102,7 +102,7 @@
 				/obj/item/clothing/under/dress/skirt = 2,
 				/obj/item/clothing/under/suit/white/skirt = 2,
 				/obj/item/clothing/under/rank/captain/suit/skirt = 2,
-				/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt = 2,
+				/obj/item/clothing/under/rank/civilian/logistics_officer/suit/skirt = 2,
 				/obj/item/clothing/under/rank/civilian/bartender/purple = 2,
 				/obj/item/clothing/suit/jacket/miljacket = 1,
 			),

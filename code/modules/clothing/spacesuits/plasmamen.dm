@@ -349,15 +349,15 @@
 	visor_icon = "clown_envisor"
 	smile_state = "clown_smile"
 
-/obj/item/clothing/head/helmet/space/plasmaman/head_of_personnel
-	name = "head of personnel's envirosuit helmet"
-	desc = "A special containment helmet designed for the Head of Personnel. Embarrassingly enough, it looks way too much like the captain's design save for the red stripes."
+/obj/item/clothing/head/helmet/space/plasmaman/logistics_officer
+	name = "logistics officer's envirosuit helmet"
+	desc = "A special containment helmet designed for the Logistics Officer. Embarrassingly enough, it looks way too much like the captain's design save for the red stripes."
 	icon_state = "hop_envirohelm"
 	inhand_icon_state = null
 
 /obj/item/clothing/head/helmet/space/plasmaman/captain
 	name = "captain's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Captain. Embarrassingly enough, it looks way too much like the Head of Personnel's design save for the gold stripes. I mean, come on. Gold stripes can fix anything."
+	desc = "A special containment helmet designed for the Captain. Embarrassingly enough, it looks way too much like the Logistics Officer's design save for the gold stripes. I mean, come on. Gold stripes can fix anything."
 	icon_state = "captain_envirohelm"
 	inhand_icon_state = null
 	armor_type = /datum/armor/plasmaman_captain

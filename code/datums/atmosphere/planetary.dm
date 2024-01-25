@@ -72,3 +72,27 @@
 
 	minimum_temp = T20C
 	maximum_temp = T20C
+
+/datum/atmosphere/cajhos
+	id = CAJHOS_DEFAULT_ATMOS
+
+	base_gases = list(
+		/datum/gas/plasma=21,
+		/datum/gas/carbon_dioxide=80,
+	)
+	normal_gases = list(
+		/datum/gas/oxygen=10,
+		/datum/gas/nitrogen=10,
+		/datum/gas/bz=10,
+	)
+	restricted_gases = list(
+		/datum/gas/miasma=1.2,
+		/datum/gas/water_vapor=0.1,
+	)
+	restricted_chance = 30
+
+	minimum_pressure = 101
+	maximum_pressure = 102
+
+	minimum_temp = BODYTEMP_COLD_DAMAGE_LIMIT + 1
+	maximum_temp = 350

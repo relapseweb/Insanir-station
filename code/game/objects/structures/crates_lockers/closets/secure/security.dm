@@ -22,8 +22,8 @@
 	new /obj/item/storage/photo_album/captain(src)
 
 /obj/structure/closet/secure_closet/hop
-	name = "head of personnel's locker"
-	req_access = list(ACCESS_HOP)
+	name = "logistics officer's locker"
+	req_access = list(ACCESS_LO)
 	icon_state = "hop"
 
 /obj/structure/closet/secure_closet/hop/PopulateContents()

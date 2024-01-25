@@ -140,7 +140,7 @@
 
 /obj/item/paperwork/service
 	stamp_requested = /obj/item/stamp/hop
-	stamp_job = /datum/job/head_of_personnel
+	stamp_job = /datum/job/logistics_officer
 	stamp_icon = "paper_stamp-hop"
 
 /obj/item/paperwork/service/Initialize(mapload)

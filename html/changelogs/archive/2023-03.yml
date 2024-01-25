@@ -829,7 +829,7 @@
   SyncIt21:
   - bugfix: aux construction console RCD works again
   kawoppi:
-  - bugfix: added lights to the tramstation head of personnel's office
+  - bugfix: added lights to the tramstation logistics officer's office
 2023-03-24:
   Jacquerel:
   - rscadd: Bioscrambler anomalies will once again swap your organs with other organs.

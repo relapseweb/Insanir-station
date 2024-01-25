@@ -12,7 +12,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "VIROLOGIST"
 
-	outfit = /datum/outfit/job/virologist
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/viro
 
 	paycheck = PAYCHECK_CREW

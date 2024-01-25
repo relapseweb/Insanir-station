@@ -7,7 +7,7 @@
 	return available_interaction_modes
 
 /datum/preference/choiced/interaction_mode/create_default_value()
-	return IMODE_COMBAT_MODE
+	return IMODE_INTENTS
 
 /datum/preference/choiced/interaction_mode/apply_to_client(client/client, value)
 	var/mob/host = client.mob

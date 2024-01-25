@@ -5,11 +5,11 @@
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = SUPERVISOR_HOP
+	supervisors = SUPERVISOR_LO
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "BOTANIST"
 
-	outfit = /datum/outfit/job/botanist
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/botany
 
 	paycheck = PAYCHECK_CREW

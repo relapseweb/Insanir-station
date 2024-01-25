@@ -133,3 +133,12 @@
 	desc = "A mining car. This one doesn't work on rails, but has to be dragged."
 	name = "Mining car (not for rails)"
 	icon_state = "miningcar"
+
+/*space away missions */
+/obj/docking_port/stationary/spacemine
+	name = "SS13: Mining Dock"
+	shuttle_id = "mining_home"
+	roundstart_template = /datum/map_template/shuttle/mining/delta
+	width = 7
+	dwidth = 3
+	height = 5

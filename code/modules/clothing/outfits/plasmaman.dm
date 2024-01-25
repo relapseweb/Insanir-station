@@ -192,12 +192,12 @@
 	gloves = /obj/item/clothing/gloves/captain //Too iconic to be replaced with a plasma version
 	head = /obj/item/clothing/head/helmet/space/plasmaman/captain
 
-/datum/outfit/plasmaman/head_of_personnel
-	name = "Head of Personnel Plasmaman"
+/datum/outfit/plasmaman/logistics_officer
+	name = "Logistics Officer Plasmaman"
 
-	uniform = /obj/item/clothing/under/plasmaman/head_of_personnel
-	gloves = /obj/item/clothing/gloves/color/plasmaman/head_of_personnel
-	head = /obj/item/clothing/head/helmet/space/plasmaman/head_of_personnel
+	uniform = /obj/item/clothing/under/plasmaman/logistics_officer
+	gloves = /obj/item/clothing/gloves/color/plasmaman/logistics_officer
+	head = /obj/item/clothing/head/helmet/space/plasmaman/logistics_officer
 
 /datum/outfit/plasmaman/head_of_security
 	name = "Head of Security Plasmaman"

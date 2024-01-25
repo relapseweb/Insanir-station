@@ -263,7 +263,7 @@ GLOBAL_LIST_INIT(loadout_exosuits, generate_loadout_items(/datum/loadout_item/su
 /datum/loadout_item/suit/coat_hydro
 	name = "Hydroponics Winter Coat"
 	item_path = /obj/item/clothing/suit/hooded/wintercoat/hydro
-	restricted_roles = list(JOB_HEAD_OF_PERSONNEL, JOB_BOTANIST) // Reserved for Botanists and their boss, the Head of Personnel
+	restricted_roles = list(JOB_HEAD_OF_PERSONNEL, JOB_BOTANIST) // Reserved for Botanists and their boss, the Logistics Officer
 
 /datum/loadout_item/suit/coat_cargo
 	name = "Cargo Winter Coat"

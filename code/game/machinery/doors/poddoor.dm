@@ -224,3 +224,8 @@
 /obj/machinery/door/poddoor/massdriver_trash
 	name = "Disposals Launcher Bay Door"
 	id = MASSDRIVER_DISPOSALS
+
+/obj/machinery/door/poddoor/elevator
+	name = "elevator door"
+	desc = "A door that opens mechanically."
+	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/elevator.dmi'

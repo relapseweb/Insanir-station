@@ -46,7 +46,7 @@
 	icon = "town"
 
 /datum/award/achievement/mafia/hop
-	name = "Head of Personnel Victory"
+	name = "Logistics Officer Victory"
 	desc = "King of Assistants, waster of a single mafia's night, thrower of games."
 	database_id = MAFIA_MEDAL_HOP
 	icon = "town"

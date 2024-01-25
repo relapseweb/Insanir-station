@@ -11,7 +11,7 @@ Assistant
 	spawn_positions = 5
 	supervisors = "absolutely everyone"
 	exp_granted_type = EXP_TYPE_CREW
-	outfit = /datum/outfit/job/assistant
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman
 	paycheck = PAYCHECK_LOWER // Get a job. Job reassignment changes your paycheck now. Get over it.
 

@@ -101,10 +101,10 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	var/namepart = "[speaker.GetVoice()][speaker.get_alt_name()]"
 	if(face_name && ishuman(speaker))
 		var/mob/living/carbon/human/H = speaker
-		namepart = "[H.get_face_name()]" //So "fake" speaking like in hallucinations does not give the speaker away if disguised
+		namepart = "[H.GetJob()] [H.get_face_name()]" //So "fake" speaking like in hallucinations does not give the speaker away if disguised
 	else if(visible_name && ishuman(speaker))
 		var/mob/living/carbon/human/human_speaker = speaker
-		namepart = "[human_speaker.get_visible_name()]"
+		namepart = "[human_speaker.GetJob()][human_speaker.get_visible_name()]"
 	//End name span.
 	var/endspanpart = "</span>"
 

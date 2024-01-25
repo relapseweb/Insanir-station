@@ -6,11 +6,11 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = SUPERVISOR_HOP
+	supervisors = SUPERVISOR_LO
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CHAPLAIN"
 
-	outfit = /datum/outfit/job/chaplain
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/chaplain
 
 	paycheck = PAYCHECK_CREW

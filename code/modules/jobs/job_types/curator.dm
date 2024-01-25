@@ -6,11 +6,11 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = SUPERVISOR_HOP
+	supervisors = SUPERVISOR_LO
 	config_tag = "CURATOR"
 	exp_granted_type = EXP_TYPE_CREW
 
-	outfit = /datum/outfit/job/curator
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/curator
 
 	paycheck = PAYCHECK_CREW

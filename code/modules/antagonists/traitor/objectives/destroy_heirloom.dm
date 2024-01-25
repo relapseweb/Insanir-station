@@ -97,7 +97,7 @@
 		/datum/job/warden,
 		/datum/job/detective,
 		// Heads of staff
-		/datum/job/head_of_personnel,
+		/datum/job/logistics_officer,
 		/datum/job/chief_medical_officer,
 		/datum/job/research_director,
 	)

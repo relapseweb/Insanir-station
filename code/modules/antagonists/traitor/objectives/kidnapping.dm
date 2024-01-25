@@ -98,7 +98,7 @@
 		// Heads of staff
 		/datum/job/chief_engineer,
 		/datum/job/chief_medical_officer,
-		/datum/job/head_of_personnel,
+		/datum/job/logistics_officer,
 		/datum/job/research_director,
 		// Security
 		/datum/job/detective,

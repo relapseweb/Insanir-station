@@ -285,7 +285,7 @@ SUBSYSTEM_DEF(ticker)
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart))
 
 	to_chat(world, span_notice("<B>Welcome to [station_name()], enjoy your stay!</B>"))
-	
+
 	for(var/mob/M as anything in GLOB.player_list)
 		if(!M.client)
 			SEND_SOUND(M, sound(SSstation.announcer.get_rand_welcome_sound(), volume = 100))
@@ -367,7 +367,11 @@ SUBSYSTEM_DEF(ticker)
 			var/atom/destination = player.mind.assigned_role.get_roundstart_spawn_point()
 			if(!destination) // Failed to fetch a proper roundstart location, won't be going anywhere.
 				continue
-			player.create_character(destination)
+			var/mob/living/carbon/playercharacter = player.create_character(destination)
+			for(var/obj/machinery/cryopod/cryopod in destination.loc)
+				cryopod.close_machine(playercharacter)
+				playercharacter.SetUnconscious(rand(20,100))
+				playercharacter.stamina_stun()
 		CHECK_TICK
 
 /datum/controller/subsystem/ticker/proc/collect_minds()

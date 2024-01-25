@@ -497,7 +497,7 @@
 	name = "Purple Bioluminescence"
 	glow_color = "#D966FF"
 
-// Pink (gay tide station pride)
+// Pink
 /datum/plant_gene/trait/glow/pink
 	name = "Pink Bioluminescence"
 	glow_color = "#FFB3DA"

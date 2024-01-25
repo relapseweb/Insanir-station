@@ -240,6 +240,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod, 32)
 	stored_ckey = null
 	stored_name = null
 	stored_rank = "N/A"
+	playsound(src,'sound/machines/air_hiss.ogg',100)
 
 /obj/machinery/cryopod/container_resist_act(mob/living/user)
 	visible_message(span_notice("[occupant] emerges from [src]!"),
@@ -659,3 +660,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/cryopod/prison, 18)
 	computer_area = /area/ruin/syndicate_lava_base/dormitories
 
 #undef AHELP_FIRST_MESSAGE
+
+/obj/cryocore
+	name = "Cryogenic core"
+	desc = "A cryogenic agent coolant chamber, recycled through this core, isn't technology amazing"
+	density = TRUE
+	pixel_y = -1
+	icon = 'monkestation/icons/obj/cryogenicscenter.dmi'
+	icon_state = "core"

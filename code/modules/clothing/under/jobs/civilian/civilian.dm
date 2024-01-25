@@ -60,15 +60,15 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel
-	desc = "A slick uniform worn by those to earn the position of \"Head of Personnel\"."
-	name = "head of personnel's uniform"
+/obj/item/clothing/under/rank/civilian/logistics_officer
+	desc = "A slick uniform worn by those to earn the position of \"Logistics Officer\"."
+	name = "logistics officer's uniform"
 	icon_state = "hop"
 	inhand_icon_state = "b_suit"
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/skirt
-	name = "head of personnel's skirt"
-	desc = "A slick uniform and skirt combo worn by those to earn the position of \"Head of Personnel\"."
+/obj/item/clothing/under/rank/civilian/logistics_officer/skirt
+	name = "logistics officer's skirt"
+	desc = "A slick uniform and skirt combo worn by those to earn the position of \"Logistics Officer\"."
 	icon_state = "hop_skirt"
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -76,14 +76,14 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/suit
-	name = "head of personnel's suit"
+/obj/item/clothing/under/rank/civilian/logistics_officer/suit
+	name = "logistics officer's suit"
 	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
 	icon_state = "teal_suit"
 	inhand_icon_state = "g_suit"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt
+/obj/item/clothing/under/rank/civilian/logistics_officer/suit/skirt
 	name = "teal suitskirt"
 	desc = "A teal suitskirt and yellow necktie. An authoritative yet tacky ensemble."
 	icon_state = "teal_suit_skirt"

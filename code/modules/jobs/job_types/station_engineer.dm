@@ -12,7 +12,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "STATION_ENGINEER"
 
-	outfit = /datum/outfit/job/engineer
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/engineering
 
 	paycheck = PAYCHECK_CREW

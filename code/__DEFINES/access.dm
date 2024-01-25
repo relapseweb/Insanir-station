@@ -32,8 +32,8 @@
 #define ACCESS_CHANGE_IDS "change_ids"
 /// Access used for the Captain's personal quarters in mapping, as well as what allows one to order emergency shuttles.
 #define ACCESS_CAPTAIN "captain"
-/// Access used for the Head of Personnel's personal quarters in mapping, as well as the security console and other HoP-related things.
-#define ACCESS_HOP "hop"
+/// Access used for the Logistics Officer's personal quarters in mapping, as well as the security console and other HoP-related things.
+#define ACCESS_LO "hop"
 
 /// Security's General Access. In mapping, grants access to spaces such as to the "meeting room" or firing range, as well as being the general access that Tablet/Computer Programs check for "heads". Also unlocks other types of security equipment.
 #define ACCESS_SECURITY "security"
@@ -353,7 +353,7 @@
 	ACCESS_CE, \
 	ACCESS_CMO, \
 	ACCESS_HOS, \
-	ACCESS_HOP, \
+	ACCESS_LO, \
 	ACCESS_QM, \
 	ACCESS_RD, \
 )
@@ -509,7 +509,7 @@
 	ACCESS_COMMAND, \
 	ACCESS_EVA, \
 	ACCESS_GATEWAY, \
-	ACCESS_HOP, \
+	ACCESS_LO, \
 	ACCESS_KEYCARD_AUTH, \
 	ACCESS_RC_ANNOUNCE, \
 	ACCESS_TELEPORTER, \

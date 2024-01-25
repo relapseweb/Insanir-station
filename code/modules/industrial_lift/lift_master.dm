@@ -341,10 +341,9 @@ GLOBAL_LIST_EMPTY(active_lifts_by_type)
 	var/obj/structure/industrial_lift/prime_lift = return_closest_platform_to_z(direction == UP ? world.maxz : 0)
 
 	// If anyone changes the hydraulic sound effect I sure hope they update this variable...
-	var/hydraulic_sfx_duration = 2 SECONDS
+	var/hydraulic_sfx_duration = 8 SECONDS
 	// ...because we use the duration of the sound effect to make it last for roughly the duration of the lift travel
 	playsound(prime_lift, 'sound/mecha/hydraulic.ogg', 25, vary = TRUE, frequency = clamp(hydraulic_sfx_duration / lift_move_duration, 0.33, 3))
-
 	// Move the lift after a timer
 	addtimer(CALLBACK(src, PROC_REF(move_lift_vertically), direction, user), lift_move_duration, TIMER_UNIQUE)
 	// Open doors after the set duration if supplied
@@ -495,7 +494,6 @@ GLOBAL_LIST_EMPTY(active_lifts_by_type)
 
 	if(!isnull(on_z_level) && !islist(on_z_level))
 		on_z_level = list(on_z_level)
-
 	var/played_ding = FALSE
 	for(var/obj/machinery/door/elevator_door as anything in GLOB.elevator_doors)
 		if(elevator_door.elevator_linked_id != specific_lift_id)
