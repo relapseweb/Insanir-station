@@ -24,7 +24,7 @@
 	/// The mob that "owns" this limb
 	/// DO NOT MODIFY DIRECTLY. Use set_owner()
 	var/mob/living/carbon/owner
-
+	var/list/layered_organs = list()
 	/// If this limb can be scarred.
 	var/scarrable = TRUE
 

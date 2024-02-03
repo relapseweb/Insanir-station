@@ -487,7 +487,7 @@
 		var/obj/item/bodypart/BP = X
 		total_brute += (BP.brute_dam * BP.body_damage_coeff)
 		total_burn += (BP.burn_dam * BP.body_damage_coeff)
-	set_health(round(maxHealth - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute, DAMAGE_PRECISION))
+	set_health(100 - get_organ_loss(ORGAN_SLOT_BRAIN))
 	update_stat()
 	on_stamina_update()
 	if(((maxHealth - total_burn) < HEALTH_THRESHOLD_DEAD*2) && stat == DEAD )
@@ -793,10 +793,10 @@
 	if(status_flags & GODMODE)
 		return
 	if(stat != DEAD)
-		if(health <= HEALTH_THRESHOLD_DEAD && !HAS_TRAIT(src, TRAIT_NODEATH))
+		if(health <= HEALTH_THRESHOLD_DEAD)
 			death()
 			return
-		if(health <= hardcrit_threshold && !HAS_TRAIT(src, TRAIT_NOHARDCRIT))
+		if(health <= HEALTH_THRESHOLD_DEAD && !HAS_TRAIT(src, TRAIT_NODEATH))
 			set_stat(HARD_CRIT)
 		else if(HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 			set_stat(UNCONSCIOUS)

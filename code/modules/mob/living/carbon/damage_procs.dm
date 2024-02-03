@@ -170,6 +170,7 @@
 	if(required_organtype && (affected_organ.status != required_organtype))
 		return
 	affected_organ.apply_organ_damage(amount, maximum)
+	updatehealth()
 
 /**
  * If an organ exists in the slot requested, and we are capable of taking damage (we don't have [GODMODE] on), call the set damage proc on that organ, which can

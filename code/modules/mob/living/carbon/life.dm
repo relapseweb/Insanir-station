@@ -212,7 +212,7 @@
 	/// Minimum O2 before suffocation.
 	var/safe_oxygen_min = 16
 	/// Maximum CO2 before side-effects.
-	var/safe_co2_max = 10
+	var/safe_co2_max = 6
 	/// Maximum Plasma before side-effects.
 	var/safe_plas_max = 0.05
 	/// Maximum Pluoxum before side-effects.

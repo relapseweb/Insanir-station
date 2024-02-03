@@ -469,6 +469,7 @@
 	return amount
 
 /mob/living/proc/adjustOrganLoss(slot, amount, maximum, required_organtype)
+	updatehealth()
 	return
 
 /mob/living/proc/setOrganLoss(slot, amount, maximum, required_organtype)

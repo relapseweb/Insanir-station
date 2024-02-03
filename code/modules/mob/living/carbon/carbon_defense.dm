@@ -179,7 +179,7 @@
 	if(SEND_SIGNAL(src, COMSIG_ATOM_ATTACK_HAND, user, modifiers) & COMPONENT_CANCEL_ATTACK_CHAIN)
 		. = TRUE
 
-	
+
 	if(length(diseases) && isliving(user))
 		var/mob/living/living = user
 		var/block = living.check_contact_sterility(BODY_ZONE_EVERYTHING)
@@ -196,7 +196,7 @@
 			if(length(contact) && !block)
 				for(var/datum/disease/advanced/V as anything in contact)
 					infect_disease(V, notes="(Skin Contact - (Bump), coming from [living])")
-					
+
 
 	for(var/datum/surgery/operations as anything in surgeries)
 		if((user.istate & ISTATE_HARM))
@@ -226,7 +226,7 @@
 		var/datum/disease/D = thing
 		if(D.spread_flags & DISEASE_SPREAD_CONTACT_SKIN)
 			ContactContractDisease(D)
-	*/ 
+	*/
 	if(!(user.istate & ISTATE_HARM))
 		help_shake_act(user)
 		return FALSE
@@ -682,6 +682,8 @@
 
 /mob/living/carbon/adjustOxyLoss(amount, updating_health = TRUE, forced, required_biotype, required_respiration_type)
 	. = ..()
+	if(oxyloss >= 20)
+		adjustOrganLoss(ORGAN_SLOT_BRAIN, 10, 300) //TODO make this based on willpower
 	check_passout(.)
 
 /mob/living/carbon/proc/get_interaction_efficiency(zone)
