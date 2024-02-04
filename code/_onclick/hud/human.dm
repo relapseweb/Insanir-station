@@ -1,6 +1,17 @@
 /atom/movable/screen/human
 	icon = 'icons/hud/screen_midnight.dmi'
-
+/atom/movable/screen/hudbacking/left
+	name = "right panel"
+	icon = 'insanir/icons/hud/leftpanel.dmi'
+	icon_state = "freddy"
+	screen_loc = "hudleft:1,1 to 3,16"
+	layer = TURF_LAYER
+/atom/movable/screen/hudbacking/right
+	name = "right panel"
+	icon = 'insanir/icons/hud/rightpanel.dmi'
+	icon_state = "freddy"
+	screen_loc = "hudright:1,1 to 1,16"
+	layer = TURF_LAYER
 /atom/movable/screen/human/toggle
 	name = "toggle"
 	icon_state = "toggle"
@@ -60,6 +71,14 @@
 
 	var/atom/movable/screen/using
 	var/atom/movable/screen/inventory/inv_box
+
+	using = new/atom/movable/screen/hudbacking/left
+	using.hud = src
+	static_inventory += using
+
+	using = new/atom/movable/screen/hudbacking/right
+	using.hud = src
+	static_inventory += using
 
 	using = new/atom/movable/screen/language_menu
 	using.icon = ui_style
@@ -200,18 +219,6 @@
 	using.screen_loc = ui_above_intent
 	using.hud = src
 	hotkeybuttons += using
-
-	using = new /atom/movable/screen/human/toggle()
-	using.icon = ui_style
-	using.screen_loc = ui_inventory
-	using.hud = src
-	static_inventory += using
-
-	using = new /atom/movable/screen/human/equip()
-	using.icon = ui_style
-	using.screen_loc = ui_equip_position(mymob)
-	using.hud = src
-	static_inventory += using
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "gloves"
