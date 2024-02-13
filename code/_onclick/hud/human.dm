@@ -1,16 +1,16 @@
 /atom/movable/screen/human
 	icon = 'icons/hud/screen_midnight.dmi'
 /atom/movable/screen/hudbacking/left
-	name = "right panel"
+	name = "left panel"
 	icon = 'insanir/icons/hud/leftpanel.dmi'
 	icon_state = "freddy"
-	screen_loc = "hudleft:1,1 to 3,16"
+	screen_loc = "hudleft:1,1"
 	layer = TURF_LAYER
 /atom/movable/screen/hudbacking/right
 	name = "right panel"
 	icon = 'insanir/icons/hud/rightpanel.dmi'
 	icon_state = "freddy"
-	screen_loc = "hudright:1,1 to 1,16"
+	screen_loc = "hudright:1,1"
 	layer = TURF_LAYER
 /atom/movable/screen/human/toggle
 	name = "toggle"
@@ -72,6 +72,29 @@
 	var/atom/movable/screen/using
 	var/atom/movable/screen/inventory/inv_box
 
+	using = new/atom/movable/screen/go_sleep
+	using.icon = ui_style
+	using.hud = src
+	static_inventory += using
+
+	using = new/atom/movable/screen/eye
+	using.icon = ui_style
+	using.hud = src
+	static_inventory += using
+
+	using = new/atom/movable/screen/teach
+	using.icon = ui_style
+	using.hud = src
+	static_inventory += using
+
+	using = new/atom/movable/screen/size_setter/left
+	using.hud = src
+	static_inventory += using
+
+	using = new/atom/movable/screen/size_setter/right
+	using.hud = src
+	static_inventory += using
+
 	using = new/atom/movable/screen/hudbacking/left
 	using.hud = src
 	static_inventory += using
@@ -130,20 +153,6 @@
 
 	build_hand_slots()
 
-	using = new /atom/movable/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_1"
-	using.screen_loc = ui_swaphand_position(owner,1)
-	using.hud = src
-	static_inventory += using
-
-	using = new /atom/movable/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_2"
-	using.screen_loc = ui_swaphand_position(owner,2)
-	using.hud = src
-	static_inventory += using
-
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "id"
 	inv_box.icon = ui_style
@@ -151,6 +160,26 @@
 	inv_box.icon_full = "template_small"
 	inv_box.screen_loc = ui_id
 	inv_box.slot_id = ITEM_SLOT_ID
+	inv_box.hud = src
+	static_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory()
+	inv_box.name = "right wrist"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "rwrist"
+	inv_box.icon_full = "template_small"
+	inv_box.screen_loc = ui_rwrist
+	inv_box.slot_id = ITEM_SLOT_RWRIST
+	inv_box.hud = src
+	static_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory()
+	inv_box.name = "left wrist"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "lwrist"
+	inv_box.icon_full = "template_small"
+	inv_box.screen_loc = ui_lwrist
+	inv_box.slot_id = ITEM_SLOT_LWRIST
 	inv_box.hud = src
 	static_inventory += inv_box
 
@@ -311,7 +340,7 @@
 
 	pull_icon = new /atom/movable/screen/pull()
 	pull_icon.icon = ui_style
-	pull_icon.screen_loc = ui_above_intent
+	pull_icon.screen_loc = ui_living_pull
 	pull_icon.hud = src
 	pull_icon.update_appearance()
 	static_inventory += pull_icon

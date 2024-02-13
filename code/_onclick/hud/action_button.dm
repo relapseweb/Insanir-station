@@ -249,6 +249,7 @@
 	var/expanded = FALSE
 	/// Id of any currently running timers that set our color matrix
 	var/color_timer_id
+	var/crack
 
 /atom/movable/screen/button_palette/Destroy()
 	if(our_hud)

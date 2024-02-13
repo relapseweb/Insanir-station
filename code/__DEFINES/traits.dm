@@ -984,6 +984,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define STASIS_MUTE "stasis"
 #define GENETICS_SPELL "genetics_spell"
 #define EYES_COVERED "eyes_covered"
+#define EYES_CLOSED "eyes_closed"
 #define NO_EYES "no_eyes"
 #define HYPNOCHAIR_TRAIT "hypnochair"
 #define NANITES_TRAIT "nanites"

@@ -41,7 +41,8 @@
 		if(2)
 			return("hudleft:1,11")
 		else
-			return("hudleft:1,16")
+			return("hudleft:1,16") //TODO: make this shit better
+			//TODO:  add actions and cooldowns
 
 
 /proc/ui_equip_position(mob/M)
@@ -60,6 +61,8 @@
 //Lower center, persistent menu
 #define ui_sstore1 "hudleft:3,12"
 #define ui_id "hudleft:3,7"
+#define ui_lwrist "hudleft:3,9"
+#define ui_rwrist "hudleft:1,9"
 #define ui_belt "hudleft:2,7"
 #define ui_back "hudleft:1,12"
 #define ui_storage1 "hudleft:1,8"
@@ -68,24 +71,24 @@
 
 //Lower right, persistent menu
 #define ui_drop_throw "hudleft:3,5"
-#define ui_above_movement "hudright:1,8"
+#define ui_above_movement "hudright:1,7"
 #define ui_above_intent "hudright:1,1"
-#define ui_movi "hudright:1,9"
+#define ui_movi "hudright:1,8"
 #define ui_acti "hudleft:2,6"
 #define ui_combat_toggle "hudleft:1,1"
-#define ui_zonesel "hudright:1,15"
+#define ui_zonesel "hudright:1,14"
 #define ui_acti_alt "EAST-1:28,SOUTH:5" //alternative intent switcher for when the interface is hidden (F12)
-#define ui_crafting "hudright:1,10"
-#define ui_building "hudright:1,10:16"
-#define ui_language_menu "hudright:1:-16,10:16"
-#define ui_navigate_menu "hudright:1,10"
+#define ui_crafting "hudright:1,9"
+#define ui_building "hudright:1,9:16"
+#define ui_language_menu "hudright:1:-16,9:16"
+#define ui_navigate_menu "hudright:1,9"
 
 //Upper-middle right (alerts)
-#define ui_alert1 "hudright:1,7"
-#define ui_alert2 "hudright:1,6"
-#define ui_alert3 "hudright:1,5"
-#define ui_alert4 "hudright:1,4"
-#define ui_alert5 "hudright:1,3"
+#define ui_alert1 "hudright:1,6"
+#define ui_alert2 "hudright:1,5"
+#define ui_alert3 "hudright:1,4"
+#define ui_alert4 "hudright:1,3"
+#define ui_alert5 "hudright:1,2"
 
 //alerts insanir'ified
 
@@ -97,12 +100,12 @@
 #define ui_palette_scroll_offset(north_offset) ("WEST+1:8,NORTH-[6+north_offset]:28")
 
 //Middle right (status indicators)
-#define ui_healthdoll "hudright:1,13"
-#define ui_health "hudright:1,12"
+#define ui_healthdoll "hudright:1,12"
+#define ui_health "hudright:1,11"
 #define ui_internal "hudright:1,13"
-#define ui_mood "hudright:1,14"
+#define ui_mood "hudright:1,13"
 #define ui_spacesuit "hudleft:2,4"
-#define ui_stamina "hudright:1,11"
+#define ui_stamina "hudright:1,10"
 
 //Pop-up inventory
 #define ui_shoes "hudleft:1,7"
@@ -114,9 +117,8 @@
 #define ui_ears "hudleft:1,13"
 #define ui_neck "hudleft:2,12"
 #define ui_head "hudleft:2,14"
-
 //Generic living
-#define ui_living_pull "EAST-1:28,CENTER-3:15"
+#define ui_living_pull "hudleft:2,2"
 #define ui_living_healthdoll "EAST-1:28,CENTER-1:15"
 
 //Monkeys
@@ -233,3 +235,7 @@
 
 /// The filter name for the hover outline
 #define HOVER_OUTLINE_FILTER "hover_outline"
+
+//map size setting
+#define LEFTHUDSIZE "hudleft:1,1 to 3,15"
+#define RIGHTHUDSIZE "hudright:1,1 to 1,15"

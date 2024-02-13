@@ -56,7 +56,7 @@
 /datum/status_effect/grouped/blindness
 	id = "blindness"
 	tick_interval = -1
-	alert_type = /atom/movable/screen/alert/status_effect/blind
+	alert_type = null
 	// This is not "remove on fullheal" as in practice,
 	// fullheal should instead remove all the sources and in turn cure this
 
@@ -67,11 +67,36 @@
 	owner.overlay_fullscreen(id, /atom/movable/screen/fullscreen/blind)
 	// You are blind - at most, able to make out shapes near you
 	owner.add_client_colour(/datum/client_colour/monochrome/blind)
+	if(isliving(owner))
+		var/list/hud
+		var/mob/living/ownerlivingmob = owner
+		if(ownerlivingmob.hud_used)
+			hud = ownerlivingmob.hud_used.static_inventory
+		for(var/source in sources)
+			switch(source)
+				if(UNCONSCIOUS_TRAIT)
+					for(var/atom/movable/screen/eye/eyebtn in hud)
+						eyebtn.icon_state = "eye_closed"
 	return ..()
 
+
+
 /datum/status_effect/grouped/blindness/on_remove()
+	if(isliving(owner))
+		var/list/hud
+		var/mob/living/ownerlivingmob = owner
+		if(ownerlivingmob.hud_used)
+			hud = ownerlivingmob.hud_used.static_inventory
+			if(!owner.is_blind_from(EYES_CLOSED))
+				for(var/atom/movable/screen/eye/eyebtn in hud)
+					eyebtn.icon_state = "eye_open"
+		else
+			to_chat(owner, span_purple("you dont have a hud?"))
+	else
+		to_chat(owner, span_purple("you're not alive?"))
 	owner.clear_fullscreen(id)
 	owner.remove_client_colour(/datum/client_colour/monochrome/blind)
+
 	return ..()
 
 /atom/movable/screen/alert/status_effect/blind

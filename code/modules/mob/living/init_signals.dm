@@ -59,12 +59,16 @@
 /mob/living/proc/on_knockedout_trait_gain(datum/source)
 	SIGNAL_HANDLER
 	if(stat < UNCONSCIOUS)
+		for(var/atom/movable/screen/go_sleep/sleepbtn in hud_used.static_inventory)
+			sleepbtn.icon_state = "asleep"
 		set_stat(UNCONSCIOUS)
 
 /// Called when [TRAIT_KNOCKEDOUT] is removed from the mob.
 /mob/living/proc/on_knockedout_trait_loss(datum/source)
 	SIGNAL_HANDLER
 	if(stat <= UNCONSCIOUS)
+		for(var/atom/movable/screen/go_sleep/sleepbtn in hud_used.static_inventory)
+			sleepbtn.icon_state = "awake"//TODO make this based on willpower
 		update_stat()
 
 

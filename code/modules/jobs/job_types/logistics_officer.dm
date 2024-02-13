@@ -17,7 +17,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "HEAD_OF_PERSONNEL"
 
-	outfit = /datum/outfit/job
+	outfit = /datum/outfit
 	plasmaman_outfit = /datum/outfit/plasmaman/logistics_officer
 	departments_list = list(
 		/datum/job_department/service,

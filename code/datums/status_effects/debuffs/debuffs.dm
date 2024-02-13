@@ -122,11 +122,21 @@
 
 
 //SLEEPING
-/datum/status_effect/incapacitating/sleeping
+/datum/status_effect/incapacitating/sleeping //TODO make unconcious set the hud icon instead
 	id = "sleeping"
-	alert_type = /atom/movable/screen/alert/status_effect/asleep
 	needs_update_stat = TRUE
 	tick_interval = 2 SECONDS
+	alert_type = null
+
+/datum/status_effect/incapacitating/sleeping/update_hud()
+	if(isliving(owner))
+		var/mob/living/ownerlivingmob = owner
+		if(duration == -1)
+			for(var/atom/movable/screen/go_sleep/sleepbtn in ownerlivingmob.hud_used.static_inventory)
+				sleepbtn.icon_state = "asleep"
+		else
+			for(var/atom/movable/screen/go_sleep/sleepbtn in ownerlivingmob.hud_used.static_inventory)
+				sleepbtn.icon_state = "waking"
 
 /datum/status_effect/incapacitating/sleeping/on_apply()
 	. = ..()
@@ -137,8 +147,20 @@
 		tick_interval = -1
 	RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_SLEEPIMMUNE), PROC_REF(on_owner_insomniac))
 	RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_SLEEPIMMUNE), PROC_REF(on_owner_sleepy))
+	if(isliving(owner))
+		var/mob/living/ownerlivingmob = owner
+		if(duration == -1)
+			for(var/atom/movable/screen/go_sleep/sleepbtn in ownerlivingmob.hud_used.static_inventory)
+				sleepbtn.icon_state = "asleep"
+		else
+			for(var/atom/movable/screen/go_sleep/sleepbtn in ownerlivingmob.hud_used.static_inventory)
+				sleepbtn.icon_state = "waking"
 
 /datum/status_effect/incapacitating/sleeping/on_remove()
+	if(isliving(owner))
+		var/mob/living/ownerlivingmob = owner
+		for(var/atom/movable/screen/go_sleep/sleepbtn in ownerlivingmob.hud_used.static_inventory)
+			sleepbtn.icon_state = "awake"
 	UnregisterSignal(owner, list(SIGNAL_ADDTRAIT(TRAIT_SLEEPIMMUNE), SIGNAL_REMOVETRAIT(TRAIT_SLEEPIMMUNE)))
 	if(!HAS_TRAIT(owner, TRAIT_SLEEPIMMUNE))
 		REMOVE_TRAIT(owner, TRAIT_KNOCKEDOUT, TRAIT_STATUS_EFFECT(id))
@@ -160,6 +182,7 @@
 #define HEALING_SLEEP_DEFAULT 0.2
 
 /datum/status_effect/incapacitating/sleeping/tick()
+	update_hud()
 	if(owner.maxHealth)
 		var/health_ratio = owner.health / owner.maxHealth
 		var/healing = HEALING_SLEEP_DEFAULT

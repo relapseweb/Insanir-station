@@ -21,22 +21,40 @@
 			lobby_button.owner = REF(owner)
 	var/atom/movable/screen/lobbyhud/leftpanel = new
 	var/atom/movable/screen/lobbyhud/right/rightpanel = new
+	var/atom/movable/screen/size_setter/left/sizerleft = new
+	var/atom/movable/screen/size_setter/right/sizerright = new
+	sizerright.hud = src
+	sizerleft.hud = src
 	leftpanel.hud = src
 	rightpanel.hud = src
+	static_inventory += sizerleft
+	static_inventory += sizerright
 	static_inventory += leftpanel
 	static_inventory += rightpanel
 
+/atom/movable/screen/size_setter
+	name = "panel backing"
+	desc = "you really shouldn't be seeing this, at least I made it look good"
+	icon = 'insanir/icons/hud/nothin.dmi'
+	icon_state = "sizer"
+	layer = AREA_LAYER
+
+/atom/movable/screen/size_setter/left
+	screen_loc = "hudleft:1,1 to 3,15"
+
+/atom/movable/screen/size_setter/right
+	screen_loc = "hudright:1,1 to 1,15"
 /atom/movable/screen/lobbyhud
 	name = "left panel"
 	icon = 'insanir/icons/hud/leftpanel.dmi'
 	icon_state = "mainmenu"
-	screen_loc = "hudleft:1,1 to 3,16"
+	screen_loc = "hudleft:1,1"
 
 /atom/movable/screen/lobbyhud/right
 	name = "right panel"
 	icon = 'insanir/icons/hud/rightpanel.dmi'
 	icon_state = "mainmenu"
-	screen_loc = "hudright:1,1 to 1,16"
+	screen_loc = "hudright:1,1"
 
 /atom/movable/screen/lobby
 	plane = SPLASHSCREEN_PLANE

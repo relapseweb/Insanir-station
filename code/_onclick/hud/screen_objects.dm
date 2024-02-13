@@ -76,11 +76,47 @@
 		M.swap_hand()
 	return 1
 
+/atom/movable/screen/go_sleep
+	name = "conciousness"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "awake"
+	screen_loc = ui_above_movement
+
+/atom/movable/screen/go_sleep/Click()
+	if(isliving(usr))
+		var/mob/living/user = usr
+		if(user.IsSleeping())
+			user.SetSleeping(400)//TODO set to will stat if human
+		else
+			user.PermaSleeping()
+/atom/movable/screen/eye
+	name = "eye"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "eye_open"
+	screen_loc = ui_above_movement
+
+/atom/movable/screen/eye/Click()
+	if(isliving(usr))
+		var/mob/living/user = usr
+		if(user.is_blind_from(EYES_CLOSED))
+			user.cure_blind(EYES_CLOSED)
+			if(!user.is_blind_from(UNCONSCIOUS_TRAIT))
+				icon_state = "eye_open"
+		else
+			user.become_blind(EYES_CLOSED)
+			icon_state = "eye_closed"
+
+/atom/movable/screen/teach
+	name = "teach"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "teach"
+	screen_loc = ui_above_movement
 /atom/movable/screen/navigate
 	name = "navigate"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "navigate"
 	screen_loc = ui_navigate_menu
+
 
 /atom/movable/screen/navigate/Click()
 	if(!isliving(usr))

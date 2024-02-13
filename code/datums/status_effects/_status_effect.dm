@@ -28,6 +28,9 @@
 	var/remove_on_fullheal = FALSE
 	/// If remove_on_fullheal is TRUE, what flag do we need to be removed?
 	var/heal_flag_necessary = HEAL_STATUS
+	var/mob/living/ownerlivingmob
+
+/datum/status_effect/proc/update_hud()
 
 /datum/status_effect/New(list/arguments)
 	on_creation(arglist(arguments))
